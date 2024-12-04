@@ -1,0 +1,42 @@
+the foundation      |--
+of the simplest     | 1-Primitive data types(more memory efficient)  --> wrapper class
+type system     ==> | 2-Object types
+in Java.            | 3-Arrays
+                    |--
+
+
+Use Primitive Types When:              Use Wrapper Classes When:
+Performance is critical                need to work with generic collections
+Memory usage is a concern              need nullability
+don't need null values                 need to use object-oriented features
+using basic data structures
+
+
+Another important literal in Java is null (Key Features of null in Java):
+1- For all reference types (e.g., objects, arrays), the default value is null if not explicitly initialized.
+2- null cannot be assigned to primitive types like int, float, etc...
+3- Invoking methods or accessing fields on a null reference leads to a NullPointerException.
+4- null is compatible with any reference type but has no type of its own.
+5- null is often used to signal that a reference hasn't been assigned any value yet.
+6- Always check if a reference is null before using it.
+    * this.name = Objects.requireNonNull(name, "Name cannot be null");
+7- Provide fallback or default values when working with potentially null references.
+    * String displayName = (name != null) ? name : "Guest";
+
+                    |--
+Reference Types ==> | 1-Interfaces --> define functional specifications for attributes and methods
+lead to more        | 2-Classes --> implement interfaces to define attributes and methods and to describe object behaviors
+modular and         | 3-Arrays --> fixed size data structures
+maintainable code.  | 4-Annotations
+                    | 5-Enumerations --> a fixed set of constants / represent a related set of objects
+                    |--
+
+Java’s Type System in Java 9 and Java 10 ==> Variable Handle Typed Reference (provided developers with a new way to access variables)
+                                             |--
+Java’s Type System in Java 11 to Java 17 ==> | 1- Switch Expressions
+                                             | 2- Sealed Classes =  a fixed set of classes
+                                             | 3- Records = special type of data-oriented class in which the compiler inserts boilerplate code for you.
+                                             |--
+
+A POJO class with package access --> Encapsulation --> private access without setter --> Records
+
